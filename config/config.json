@@ -1,13 +1,23 @@
 {
-  "development": {
-    "username": "root",
-    "password": "password",
-    "database": "mvp_database",
-    "host": "localhost",
-    "dialect": "mysql"
-  },
-  "production": {
-    "use_env_variable": null,
-    "dialect": "mysql"
-  }
+	"development": {
+		"username": "root",
+		"password": "password",
+		"database": "mvp_database",
+		"host": "localhost",
+		"dialect": "mysql"
+	},
+	"test": {
+		"username": "",
+		"password": null,
+		"database": "",
+		"host": "",
+		"dialect": "mysql"
+	},
+	"production": {
+		"username": "",
+		"password": null,
+		"database": "",
+		"host": "127.0.0.1",
+		"dialect": "mysql"
+	}
 }
