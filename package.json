@@ -1,0 +1,29 @@
+{
+  "name": "mvproject",
+  "version": "1.0.0",
+  "description": "A collaborative app that matches projects with talent.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Gabriel Kuettel, Maria Gomez, Zach Adriaens",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.11.1",
+    "sequelize": "^4.29.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgomez15/project2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mgomez15/project2/issues"
+  },
+  "homepage": "https://github.com/mgomez15/project2#readme"
+}
