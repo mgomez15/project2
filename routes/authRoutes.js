@@ -1,4 +1,4 @@
-var authController = require('../controllers/authcontroller.js');
+var authController = require('../controllers/auth.js');
 
 module.exports = function (app, passport) {
 
@@ -9,6 +9,7 @@ module.exports = function (app, passport) {
       successRedirect: '/dashboard',
       failureRedirect: '/signup'
    }));
+   
    app.get('/dashboard', isLoggedIn, authController.dashboard);
    app.get('/logout', authController.logout);
 

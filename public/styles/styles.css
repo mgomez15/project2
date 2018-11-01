@@ -1,11 +1,24 @@
-#home-wrapper h1 {
-  color: #4a90e2;
+/* Brand colors */
+:root {
+  --material-dark: #0E0B16;
+  --material-light: #E7DFDD;
+  --primary: #4717F6;
+  --secondary: #A239CA;
 }
 
-#home-wrapper h2 {
-  color: #ff3c2c;
+body {
+  background: var(--material-light);
+  color: var(--material-dark);
 }
 
-#home-wrapper h3 {
-  color: #ff8500;
+h1 {
+  color: var(--primary);
+}
+
+h2 {
+  color: var(--secondary);
+}
+
+h3 {
+  color: var(--primary);
 }
