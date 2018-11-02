@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-   const Project = sequelize.define('project', {
+   const Task = sequelize.define('task', {
       id: {
          autoIncrement: true,
          primaryKey: true,
@@ -10,8 +10,13 @@ module.exports = function (sequelize, DataTypes) {
          notEmpty: true
       },
       description: {
-         type: DataTypes.TEXT
+         type: DataTypes.STRING,
+         notEmpty: true
       },
+      status: {
+         type: DataTypes.ENUM('incomplete', 'inprogress', 'complete'),
+         defaultValue: 'incomplete'
+      }
    });
-   return Project;
+   return Task;
 }
