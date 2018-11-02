@@ -44,14 +44,17 @@ require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
 require('./routes/authRoutes.js')(app,passport);
 
-// load passport strategies
+// Passport strategies
 require('./config/passport/passport.js')(passport,db.user);
 
 // Starting the server, syncing our models
-db.sequelize.sync().then(function () {
+db.sequelize.sync({
+	force: true, // disable in production
+	logging: false // logging: console.log to enable logging
+}).then(function () {
 	app.listen(PORT, function () {
 		console.info(
-			`Listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`
+			`View app: http://localhost:${PORT}/`
 		);
 	});
 });
