@@ -14,13 +14,15 @@ module.exports = function (sequelize, DataTypes) {
          notEmpty: true
       },
       username: {
-         type: DataTypes.STRING
+         type: DataTypes.STRING,
+         unique: true
       },
       about: {
          type: DataTypes.TEXT
       },
       email: {
          type: DataTypes.STRING,
+         unique: true,
          validate: {
             isEmail: true
          }

@@ -39,12 +39,12 @@ app.engine(
 );
 app.set('view engine', 'handlebars');
 
-// Route config 
+// Routes
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
 require('./routes/authRoutes.js')(app,passport);
 
-//load passport strategies
+// load passport strategies
 require('./config/passport/passport.js')(passport,db.user);
 
 // Starting the server, syncing our models
