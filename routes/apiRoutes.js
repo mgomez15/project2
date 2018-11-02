@@ -1,5 +1,5 @@
-var testApiController = require('../controllers/testApi');
+const api = require('../controllers/api.js');
 
 module.exports = function(app) {
-  app.get('/test', testApiController.index);
+  app.get('/api/users', api.allUsers);
 };

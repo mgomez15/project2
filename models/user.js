@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
          notEmpty: true
       },
       username: {
-         type: DataTypes.TEXT
+         type: DataTypes.STRING
       },
       about: {
          type: DataTypes.TEXT
