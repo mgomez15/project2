@@ -1,5 +1,5 @@
-const homeController = require('../controllers/home');
+const htmlController = require('../controllers/html');
 
 module.exports = function(app) {
-  app.get('/', homeController.renderHome);
+  app.get('/', htmlController.renderHome);
 };
