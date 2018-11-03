@@ -1,7 +1,7 @@
 const db = require("../models");
 
 module.exports = {
-	renderHome: (req, res) => {
+	renderIndex: (req, res) => {
 		db.project.findAll({
 			include: ['tasks']
 		}).then(projects => {

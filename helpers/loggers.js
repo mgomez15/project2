@@ -5,12 +5,12 @@ module.exports = {
    userLogger: (req, res, next) => {
       let data = JSON.stringify(req.user);
       if (req.user) {
-         console.log(`User logged in as ${req.user.email}`);
+         console.log(`--- User logged in as ${req.user.email}`);
          fs.writeFile('./helpers/log/user.txt', data, (err) => {
             if (err) throw err;
          });
       } else {
-         console.log('User not logged in.');
+         console.log('--- User not logged in.');
          fs.writeFile('./helpers/log/user.txt', 'User not logged in.', (err) => {
             if (err) throw err;
          });
