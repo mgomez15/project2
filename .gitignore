@@ -3,5 +3,5 @@ node_modules
 npm-debug.log
 notes.md
 .env
-log/*
-!log/.gitkeep 
+helpers/log/*
+helpers/!log/.gitkeep 
