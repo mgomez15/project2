@@ -29,7 +29,7 @@ app.use(session({
 	secret: 'keyboard cat',
 	resave: true,
 	saveUninitialized: true
-})); 
+}));
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
@@ -44,6 +44,16 @@ app.engine(
 	})
 );
 app.set('view engine', 'handlebars');
+
+// Utility functions
+
+let logger = function (req, res, next) {
+	console.log(req.user);
+	console.log(req.body);
+	next();
+}
+
+app.use(logger)
 
 // Routes
 require('./routes/htmlRoutes')(app);

@@ -1,11 +1,11 @@
 module.exports = function (sequelize, DataTypes) {
    const Project = sequelize.define('project', {
+      id: {
+         primaryKey: true,
+         autoIncrement: true,
+         type: DataTypes.INTEGER
+      },
       slug: {
-         id: {
-            primaryKey: true,
-            autoIncrement: true,
-            type: DataTypes.INTEGER
-         },
          type: DataTypes.STRING,
          unique: true,
          allowNull: false,
