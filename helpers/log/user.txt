@@ -1,1 +1,1 @@
-undefined
+{"id":"46252140-dfa0-11e8-9bfe-0bcd6c666d0d","firstname":"test","lastname":"test","username":null,"about":null,"email":"test@test.com","password":"$2a$08$xsx2iztYH/KqCTArXkxkT.Yo/ByYeg2sxx3PuG35PN2ZcoPgspNoi","last_login":null,"status":"active","createdAt":"2018-11-03T19:40:09.000Z","updatedAt":"2018-11-03T19:40:09.000Z"}
