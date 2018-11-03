@@ -3,5 +3,6 @@ node_modules
 npm-debug.log
 notes.md
 .env
-log/*
-!log/.gitkeep 
+log/request.txt
+log/response.txt
+log/user.txt
