@@ -3,6 +3,6 @@ node_modules
 npm-debug.log
 notes.md
 .env
-log/request.txt
-log/response.txt
-log/user.txt
+helpers/log/request.txt
+helpers/log/response.txt
+helpers/log/user.txt
