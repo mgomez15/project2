@@ -7,12 +7,18 @@
 }
 
 body {
-  background: var(--material-light);
-  color: var(--material-dark);
+  background-image: url("https://g.foolcdn.com/editorial/images/447231/getty-light-bulb-row-with-one-lit.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 150rem;
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
-  color: var(--primary);
+  color: #A239CA;
 }
 
 h2 {
@@ -21,4 +27,18 @@ h2 {
 
 h3 {
   color: var(--primary);
+}
+
+.footer {
+  background-color: rgba(19, 18, 18, 0.537);
+  letter-spacing: 0.1em;
+  height: 4vh;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.592);
+  font-size: 12px;
+  vertical-align: 0.5;
+  line-height: 4vh;
+  float: left;
 }
