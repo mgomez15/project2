@@ -1,17 +1,17 @@
 module.exports = {
-   signup: function (req, res) {
+   signup: (req, res) => {
       res.render('signup');
    },
-   signin: function (req, res) {
+   signin: (req, res) => {
       res.render('signin');
    },
-   dashboard: function (req, res) {
+   dashboard: (req, res) => {
       res.render('dashboard', {
          firstname: req.user.firstname,
          lastname: req.user.lastname
       });
    },
-   logout: function (req, res) {
+   logout: (req, res) => {
       req.session.destroy(function (err) {
          res.redirect('/');
       });

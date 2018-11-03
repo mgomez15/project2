@@ -19,11 +19,17 @@ const PORT = process.env.PORT || 3000;
 app.use(methodOverride('_method'));
 
 // Parse application/x-www-form-urlencoded and application/json
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
 app.use(bodyParser.json());
 
 // Passport config
-app.use(session({ secret: 'keyboard cat', resave: true, saveUninitialized: true })); // session secret
+app.use(session({
+	secret: 'keyboard cat',
+	resave: true,
+	saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
@@ -39,19 +45,36 @@ app.engine(
 );
 app.set('view engine', 'handlebars');
 
-// Route config 
+// Utility functions
+
+let logger = function (req, res, next) {
+	console.log(req.user);
+	console.log(req.body);
+	next();
+}
+
+app.use(logger)
+
+// Routes
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
-require('./routes/authRoutes.js')(app,passport);
+require('./routes/authRoutes.js')(app, passport);
 
-//load passport strategies
-require('./config/passport/passport.js')(passport,db.user);
+// Passport strategies
+require('./config/passport/passport.js')(passport, db.user);
 
 // Starting the server, syncing our models
-db.sequelize.sync().then(function () {
-	app.listen(PORT, function () {
-		console.info(
-			`Listening on port ${PORT}. Visit http://localhost:${PORT}/ in your browser.`
-		);
+db.sequelize.sync({
+		force: true, // disable in production
+		logging: false // logging: console.log to enable logging
+	})
+	.then(function () {
+		app.listen(PORT, function () {
+			console.info(
+				`View app: http://localhost:${PORT}/`
+			);
+		});
+	})
+	.catch(function (error) { // Error handling
+		console.log(error);
 	});
-});
