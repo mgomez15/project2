@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 
+// Load helpers
+const helpers = require('./helpers/loggers');
+
 // Load models
 const db = require('./models');
 
@@ -45,20 +48,15 @@ app.engine(
 );
 app.set('view engine', 'handlebars');
 
-// Utility functions
-
-let logger = function (req, res, next) {
-	console.log(req.user);
-	console.log(req.body);
-	next();
-}
-
-app.use(logger)
+// Helper functions middleware
+app.use(helpers.userLogger);
+app.use(helpers.reqLogger);
+app.use(helpers.resLogger);
 
 // Routes
 require('./routes/htmlRoutes')(app);
 require('./routes/apiRoutes')(app);
-require('./routes/authRoutes.js')(app, passport);
+require('./routes/authRoutes')(app, passport);
 
 // Passport strategies
 require('./config/passport/passport.js')(passport, db.user);
