@@ -131,7 +131,7 @@ IncomingMessage {
         _pendingResponseData: 0,
         maxHeadersCount: null,
         _connectionKey: '6::::3000',
-        [Symbol(asyncId)]: 142 },
+        [Symbol(asyncId)]: 143 },
      _server: 
       Server {
         domain: null,
@@ -151,7 +151,7 @@ IncomingMessage {
         _pendingResponseData: 0,
         maxHeadersCount: null,
         _connectionKey: '6::::3000',
-        [Symbol(asyncId)]: 142 },
+        [Symbol(asyncId)]: 143 },
      _idleTimeout: 120000,
      _idleNext: 
       Socket {
@@ -178,15 +178,15 @@ IncomingMessage {
         _idleTimeout: 120000,
         _idleNext: [Object],
         _idlePrev: [Circular],
-        _idleStart: 22997,
+        _idleStart: 13631,
         _destroyed: false,
         parser: [Object],
         on: [Function: socketOnWrap],
         _paused: false,
-        [Symbol(asyncId)]: 273,
+        [Symbol(asyncId)]: 157,
         [Symbol(bytesRead)]: 0,
-        [Symbol(asyncId)]: 274,
-        [Symbol(triggerAsyncId)]: 273 },
+        [Symbol(asyncId)]: 158,
+        [Symbol(triggerAsyncId)]: 157 },
      _idlePrev: 
       TimersList {
         _idleNext: [Circular],
@@ -195,7 +195,7 @@ IncomingMessage {
         _unrefed: true,
         msecs: 120000,
         nextTick: false },
-     _idleStart: 23004,
+     _idleStart: 13649,
      _destroyed: false,
      parser: 
       HTTPParser {
@@ -250,10 +250,10 @@ IncomingMessage {
         writeHead: [Function: writeHead],
         end: [Function: end],
         [Symbol(outHeadersKey)]: [Object] },
-     [Symbol(asyncId)]: 269,
+     [Symbol(asyncId)]: 151,
      [Symbol(bytesRead)]: 0,
-     [Symbol(asyncId)]: 270,
-     [Symbol(triggerAsyncId)]: 269 },
+     [Symbol(asyncId)]: 153,
+     [Symbol(triggerAsyncId)]: 151 },
   connection: 
    Socket {
      connecting: false,
@@ -358,7 +358,7 @@ IncomingMessage {
         _pendingResponseData: 0,
         maxHeadersCount: null,
         _connectionKey: '6::::3000',
-        [Symbol(asyncId)]: 142 },
+        [Symbol(asyncId)]: 143 },
      _server: 
       Server {
         domain: null,
@@ -378,7 +378,7 @@ IncomingMessage {
         _pendingResponseData: 0,
         maxHeadersCount: null,
         _connectionKey: '6::::3000',
-        [Symbol(asyncId)]: 142 },
+        [Symbol(asyncId)]: 143 },
      _idleTimeout: 120000,
      _idleNext: 
       Socket {
@@ -405,15 +405,15 @@ IncomingMessage {
         _idleTimeout: 120000,
         _idleNext: [Object],
         _idlePrev: [Circular],
-        _idleStart: 22997,
+        _idleStart: 13631,
         _destroyed: false,
         parser: [Object],
         on: [Function: socketOnWrap],
         _paused: false,
-        [Symbol(asyncId)]: 273,
+        [Symbol(asyncId)]: 157,
         [Symbol(bytesRead)]: 0,
-        [Symbol(asyncId)]: 274,
-        [Symbol(triggerAsyncId)]: 273 },
+        [Symbol(asyncId)]: 158,
+        [Symbol(triggerAsyncId)]: 157 },
      _idlePrev: 
       TimersList {
         _idleNext: [Circular],
@@ -422,7 +422,7 @@ IncomingMessage {
         _unrefed: true,
         msecs: 120000,
         nextTick: false },
-     _idleStart: 23004,
+     _idleStart: 13649,
      _destroyed: false,
      parser: 
       HTTPParser {
@@ -477,10 +477,10 @@ IncomingMessage {
         writeHead: [Function: writeHead],
         end: [Function: end],
         [Symbol(outHeadersKey)]: [Object] },
-     [Symbol(asyncId)]: 269,
+     [Symbol(asyncId)]: 151,
      [Symbol(bytesRead)]: 0,
-     [Symbol(asyncId)]: 270,
-     [Symbol(triggerAsyncId)]: 269 },
+     [Symbol(asyncId)]: 153,
+     [Symbol(triggerAsyncId)]: 151 },
   httpVersionMajor: 1,
   httpVersionMinor: 1,
   httpVersion: '1.1',
@@ -488,7 +488,6 @@ IncomingMessage {
   headers: 
    { host: 'localhost:3000',
      connection: 'keep-alive',
-     'cache-control': 'max-age=0',
      'upgrade-insecure-requests': '1',
      'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -501,8 +500,6 @@ IncomingMessage {
      'localhost:3000',
      'Connection',
      'keep-alive',
-     'Cache-Control',
-     'max-age=0',
      'Upgrade-Insecure-Requests',
      '1',
      'User-Agent',
@@ -628,7 +625,7 @@ IncomingMessage {
         _pendingResponseData: 0,
         maxHeadersCount: null,
         _connectionKey: '6::::3000',
-        [Symbol(asyncId)]: 142 },
+        [Symbol(asyncId)]: 143 },
      _server: 
       Server {
         domain: null,
@@ -648,7 +645,7 @@ IncomingMessage {
         _pendingResponseData: 0,
         maxHeadersCount: null,
         _connectionKey: '6::::3000',
-        [Symbol(asyncId)]: 142 },
+        [Symbol(asyncId)]: 143 },
      _idleTimeout: 120000,
      _idleNext: 
       Socket {
@@ -675,15 +672,15 @@ IncomingMessage {
         _idleTimeout: 120000,
         _idleNext: [Object],
         _idlePrev: [Circular],
-        _idleStart: 22997,
+        _idleStart: 13631,
         _destroyed: false,
         parser: [Object],
         on: [Function: socketOnWrap],
         _paused: false,
-        [Symbol(asyncId)]: 273,
+        [Symbol(asyncId)]: 157,
         [Symbol(bytesRead)]: 0,
-        [Symbol(asyncId)]: 274,
-        [Symbol(triggerAsyncId)]: 273 },
+        [Symbol(asyncId)]: 158,
+        [Symbol(triggerAsyncId)]: 157 },
      _idlePrev: 
       TimersList {
         _idleNext: [Circular],
@@ -692,7 +689,7 @@ IncomingMessage {
         _unrefed: true,
         msecs: 120000,
         nextTick: false },
-     _idleStart: 23004,
+     _idleStart: 13649,
      _destroyed: false,
      parser: 
       HTTPParser {
@@ -747,10 +744,10 @@ IncomingMessage {
         writeHead: [Function: writeHead],
         end: [Function: end],
         [Symbol(outHeadersKey)]: [Object] },
-     [Symbol(asyncId)]: 269,
+     [Symbol(asyncId)]: 151,
      [Symbol(bytesRead)]: 0,
-     [Symbol(asyncId)]: 270,
-     [Symbol(triggerAsyncId)]: 269 },
+     [Symbol(asyncId)]: 153,
+     [Symbol(triggerAsyncId)]: 151 },
   _consuming: false,
   _dumped: false,
   next: [Function: next],
@@ -823,16 +820,16 @@ IncomingMessage {
         _idleTimeout: 120000,
         _idleNext: [Object],
         _idlePrev: [Object],
-        _idleStart: 23004,
+        _idleStart: 13649,
         _destroyed: false,
         parser: [Object],
         on: [Function: socketOnWrap],
         _paused: false,
         _httpMessage: [Circular],
-        [Symbol(asyncId)]: 269,
+        [Symbol(asyncId)]: 151,
         [Symbol(bytesRead)]: 0,
-        [Symbol(asyncId)]: 270,
-        [Symbol(triggerAsyncId)]: 269 },
+        [Symbol(asyncId)]: 153,
+        [Symbol(triggerAsyncId)]: 151 },
      connection: 
       Socket {
         connecting: false,
@@ -858,16 +855,16 @@ IncomingMessage {
         _idleTimeout: 120000,
         _idleNext: [Object],
         _idlePrev: [Object],
-        _idleStart: 23004,
+        _idleStart: 13649,
         _destroyed: false,
         parser: [Object],
         on: [Function: socketOnWrap],
         _paused: false,
         _httpMessage: [Circular],
-        [Symbol(asyncId)]: 269,
+        [Symbol(asyncId)]: 151,
         [Symbol(bytesRead)]: 0,
-        [Symbol(asyncId)]: 270,
-        [Symbol(triggerAsyncId)]: 269 },
+        [Symbol(asyncId)]: 153,
+        [Symbol(triggerAsyncId)]: 151 },
      _header: null,
      _onPendingData: [Function: bound updateOutgoingData],
      _sent100: false,
@@ -902,10 +899,9 @@ IncomingMessage {
         connect: [Function: onconnect] },
      _eventsCount: 2,
      _maxListeners: undefined,
-     sessions: 
-      { gEk4yy21qLlauQTf3LtgMW_PYBcP3pya: '{"cookie":{"originalMaxAge":null,"expires":null,"httpOnly":true,"path":"/"}}' },
+     sessions: {},
      generate: [Function] },
-  sessionID: 'gEk4yy21qLlauQTf3LtgMW_PYBcP3pya',
+  sessionID: 'GQ080jOVSS8dNiiUbBXk9wm130CKFYLy',
   session: 
    Session {
      cookie: 
