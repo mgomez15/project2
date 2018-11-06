@@ -33,4 +33,33 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// Associations
+db.team.hasMany(db.user, {
+   as: 'users' 
+});
+
+db.team.hasMany(db.project, { 
+  as: 'projects' 
+});
+
+db.project.hasMany(db.task, { 
+  as: 'tasks' 
+});
+
+db.user.hasMany(db.task, { 
+  as: 'tasks' 
+});
+
+db.user.hasMany(db.project, { 
+  as: 'projects' 
+});
+
+db.user.belongsTo(db.team, {
+  as: 'user'
+});
+
+db.user.hasMany(db.skill, {
+  as: 'skills'
+});
+
 module.exports = db;

@@ -54,9 +54,9 @@ app.use(helpers.reqLogger);
 app.use(helpers.resLogger);
 
 // Routes
-require('./routes/htmlRoutes')(app);
-require('./routes/apiRoutes')(app);
-require('./routes/authRoutes')(app, passport);
+const htmlRoutes = require('./routes/htmlRoutes')(app);
+const apiRoutes = require('./routes/apiRoutes')(app);
+const authRoutes = require('./routes/authRoutes')(app, passport);
 
 // Passport strategies
 require('./config/passport/passport.js')(passport, db.user);

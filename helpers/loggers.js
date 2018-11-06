@@ -5,7 +5,7 @@ module.exports = {
    userLogger: (req, res, next) => {
       let enable = process.env.USER_LOGGING;
       if (enable === 'true') {
-         console.log('--- User logging enabled.');
+         console.log('--- User logged.');
          let data = JSON.stringify(req.user);
          if (req.user) {
             fs.writeFile('./helpers/log/user.txt', data, (err) => {
@@ -26,7 +26,7 @@ module.exports = {
    reqLogger: (req, res, next) => {
       let enable = process.env.REQ_LOGGING;
       if (enable === 'true') {
-         console.log('--- Request logging enabled.');
+         console.log('--- Request logged.');
          let data = util.inspect(req);
          fs.writeFile('./helpers/log/request.txt', data, (err) => {
             if (err) throw err;
@@ -41,7 +41,7 @@ module.exports = {
    resLogger: (req, res, next) => {
       let enable = process.env.RES_LOGGING;
       if (enable === 'true') {
-         console.log('--- Response logging enabled.');
+         console.log('--- Response logged.');
          let data = util.inspect(res);
          fs.writeFile('./helpers/log/response.txt', data, (err) => {
             if (err) throw err;
