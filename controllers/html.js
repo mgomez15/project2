@@ -11,4 +11,13 @@ module.exports = {
 			});
 		})
 	},
+	renderHome: (req, res) => {
+		res.render('home');
+	},
+	renderAbout: (req, res) => {
+		res.render('about');
+	},
+	renderBrowse: (req, res) => {
+		res.render('browse');
+	}
 };
