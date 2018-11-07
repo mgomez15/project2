@@ -5,4 +5,5 @@ module.exports = function(app) {
   app.get('/home', htmlController.renderHome);
   app.get('/about', htmlController.renderAbout);
   app.get('/browse', htmlController.renderBrowse);
+  
 };
