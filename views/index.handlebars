@@ -1,31 +1,65 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div id="signup">SIGN IN</div>
-      <form id="signin" name="signin" method="post" action="signin">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign In" />
+<div id="bg-body"></div>
+<div class="bg py-5">
+  <div class="card text-center mx-auto my-4" style="width: 18rem;">
+    <img class="card-img-top mt-5" src="/images/logo.svg" alt="Card image cap" width="72" height="72">
+    <div class="card-body">
+      <h5 class="card-title">Welcome.</h5>
+      <h6 class="card-subtitle mb-4 text-muted">Sign in or <a href="/" data-toggle="modal" data-target="#mvpModal">register</a>
+        to continue</h6>
+      {{!-- <p class="card-text">Some quick mvp text to build on the card title and make up the bulk of the card's
+        content.</p> --}}
+      <form class="form-signin" name="signin" method="post" action="signin">
+        <div class="form-group p-1 m-1">
+          <label for="email" class="sr-only">Email address</label>
+          <input name="email" type="email" class="form-control" placeholder="Email address" required="true" autofocus="">
+        </div>
+        <div class="form-group p-1 m-1">
+          <label for="password" class="sr-only">Password</label>
+          <input name="password" type="password" class="form-control" placeholder="Password" required="true">
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
       </form>
     </div>
-    <div class="col">
-      <div id="signin">SIGN UP</div>
-      <form id="signup" name="signup" method="post" action="/signup">
-        <label for="email">Email Address</label>
-        <input class="text" name="email" type="email" />
-        <label for="firstname">Firstname</label>
-        <input name="firstname" type="text" />
-        <label for="lastname">Lastname</label>
-        <input name="lastname" type="text" />
-        <label for="password">Password</label>
-        <input name="password" type="password" />
-        <input class="btn" type="submit" value="Sign Up" />
-      </form>
-    </div>
+  </div>
 
+  <div class="modal fade" id="mvpModal" tabindex="-1" role="dialog" aria-labelledby="mvpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mvpModalLabel">Register my account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="signup" name="signup" method="post" action="/signup">
+            <div class="form-group">
+              <label for="mvpInputEmail1">Email address</label>
+              <input name="email" type="email" class="form-control" id="mvpInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="mvpInputPassword1">Username</label>
+              <input name="username" type="text" class="form-control" id="mvpInputPassword1" placeholder="Username123">
+            </div>
+            <div class="form-group">
+              <label for="mvpInputPassword1">Password</label>
+              <input name="password" type="password" class="form-control" id="mvpInputPassword1" placeholder="Password">
+            </div>
+            <input type="submit" class="btn btn-primary">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<p class="p-5 text-center">Reprehenderit est sunt ut irure esse Lorem duis dolore. Esse aliquip in tempor veniam nisi
+  occaecat adipisicing quis mollit esse. Duis cupidatat nisi commodo voluptate ut aute aliquip mollit amet mollit minim
+  magna anim.</p>
 
 {{> footer/footer}}
