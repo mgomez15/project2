@@ -6,4 +6,6 @@ module.exports = function(app) {
   app.get('/about', htmlController.renderAbout);
   app.get('/browse', htmlController.renderBrowse);
   app.get('/projects', htmlController.renderProjects);
+  app.get('/create', htmlController.renderCreate);
+  app.get('/users', htmlController.renderUsers);
 };

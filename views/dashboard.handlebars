@@ -1,13 +1,76 @@
 <head>
 	<title>Dashboard</title>
 </head>
+
 <body>
 	{{> nav/navbar}}
-<h2>Dashboard</h2>
-<h4>Welcome, {{firstname}} {{lastname}}</h4>
-<hr/>
-<h4>My projects:</h4>
-<hr/>
-<h5>Hurray! you are logged in.</h5>
+	<h2>MVProducts DASHBOARD</h2>
+	<h4>Welcome, {{firstname}} {{lastname}}</h4>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="https://winkeyecare.com/wp-content/uploads/2013/03/Empty-Profile-Picture-450x450.jpg" alt="..." class="img-thumbnail"
+				 height="200pt" width="230pt">
+			</div>
+			<div class="col-md-5">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">SKILLS</h5>
+
+						<label class="check">Front-end
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+
+						<label class="check">Back-end
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+
+						<label class="check">Full-stack
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<label class="check">Design
+							<input type="checkbox">
+							<span class="checkmark"></span>
+						</label>
+						<button type="button" class="btn btn-primary btn-lg btn-block">ADD SKILLS</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">TEAMS</h5>
+						<div class="list-group">
+						<ul></ul>
+						</div>
+						<button type="button" class="btn btn-primary btn-lg btn-block">ADD TEAMS</button>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">PROJECTS</h5>
+						<a href="/projects" class="list-group-item list-group-item-action active">
+							Cras justo odio
+						</a>
+						<a href="#" class="list-group-item list-group-item-action">RECIPES GROUP</a>
+						<a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+						<button type="button" class="btn btn-primary btn-lg btn-block">CREATE A PROJECT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 </body>

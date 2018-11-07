@@ -23,5 +23,13 @@ module.exports = {
 
 	renderProjects: (req, res) => {
 		res.render('projects');
+	},
+
+	renderCreate: (req, res) => {
+		res.render('create');
+	},
+
+	renderUsers: (req, res) => {
+		res.render('users');
 	}
 };
