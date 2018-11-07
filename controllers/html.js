@@ -20,7 +20,6 @@ module.exports = {
 	renderBrowse: (req, res) => {
 		res.render('browse');
 	},
-
 	renderProjects: (req, res) => {
 		res.render('projects');
 	}

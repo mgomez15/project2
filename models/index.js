@@ -34,32 +34,45 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 // Associations
+
+// Team -> Users
 db.team.hasMany(db.user, {
-   as: 'users' 
+   as: 'teamUsers' 
 });
-
-db.team.hasMany(db.project, { 
-  as: 'projects' 
-});
-
-db.project.hasMany(db.task, { 
-  as: 'tasks' 
-});
-
-db.user.hasMany(db.task, { 
-  as: 'tasks' 
-});
-
-db.user.hasMany(db.project, { 
-  as: 'projects' 
-});
-
 db.user.belongsTo(db.team, {
-  as: 'user'
+  as: 'teamUser'
 });
 
+// Team -> Projects 
+db.team.hasMany(db.project, { 
+  as: 'teamProjects' 
+});
+db.project.belongsTo(db.team, {
+  as: 'teamProject'
+});
+
+// Projects -> Tasks
+db.project.hasMany(db.task, { 
+  as: 'projectTasks' 
+});
+db.task.belongsTo(db.project, {
+  as: 'projectTask'
+});
+
+// User -> Tasks
+db.user.hasMany(db.task, { 
+  as: 'userTasks' 
+});
+db.task.belongsTo(db.user, {
+  as: 'userTask'
+});
+
+// User -> Skills
 db.user.hasMany(db.skill, {
-  as: 'skills'
+  as: 'userSkills'
+});
+db.skill.belongsTo(db.user, {
+  as: 'userSkill'
 });
 
 module.exports = db;
