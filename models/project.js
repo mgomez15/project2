@@ -1,20 +1,9 @@
 module.exports = function (sequelize, DataTypes) {
    const Project = sequelize.define('project', {
       id: {
+         type: DataTypes.UUID,
          primaryKey: true,
-         autoIncrement: true,
-         type: DataTypes.INTEGER
-      },
-      slug: {
-         type: DataTypes.STRING,
-         unique: true,
-         allowNull: false,
-         validate: {
-            len: {
-               args: [3, 100],
-               msg: 'Your title is either too short or too long!'
-            }
-         }
+         defaultValue: DataTypes.UUIDV4
       },
       name: {
          type: DataTypes.STRING,
@@ -23,7 +12,7 @@ module.exports = function (sequelize, DataTypes) {
          validate: {
             len: {
                args: [3, 100],
-               msg: 'Your title is either too short or too long!'
+               msg: 'Your project title is either too short or too long!'
             }
          }
       },
@@ -47,12 +36,12 @@ module.exports = function (sequelize, DataTypes) {
          }
       }
    });
-   Project.associate = function(db) {
-      // Project has many tasks
-      Project.hasMany(db.task, {
-         as: 'tasks',
-         foreignKey: 'projectId'
-      });
-   };
+   // Project.associate = function (db) {
+   //    // Project has many tasks
+   //    Project.hasMany(db.task, {
+   //       as: 'tasks',
+   //       foreignKey: 'projectId'
+   //    });
+   // };
    return Project;
 }

@@ -1,9 +1,9 @@
 const db = require("../models");
 
 module.exports = {
-	renderHome: (req, res) => {
+	renderIndex: (req, res) => {
 		db.project.findAll({
-			include: ['tasks']
+			// include: ['tasks']
 		}).then(projects => {
 			res.render('index', {
 				msg: 'This is data being passed into the render method.',
@@ -11,4 +11,17 @@ module.exports = {
 			});
 		})
 	},
+	renderHome: (req, res) => {
+		res.render('home');
+	},
+	renderAbout: (req, res) => {
+		res.render('about');
+	},
+	renderBrowse: (req, res) => {
+		res.render('browse');
+	},
+
+	renderProjects: (req, res) => {
+		res.render('projects');
+	}
 };
