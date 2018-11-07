@@ -6,9 +6,24 @@
   --secondary: #A239CA;
 }
 
-body {
-  background: var(--material-light);
-  color: var(--material-dark);
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background:
+    linear-gradient(
+      rgba(255, 0, 0, 0.45),
+      rgba(39, 3, 85, 0.45)
+    ),
+    url(../images/background.jpg);
+
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -26,6 +41,3 @@ h3 {
 .footer {
   text-align: center;
 }
-
- 
-  
