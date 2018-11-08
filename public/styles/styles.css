@@ -10,8 +10,8 @@ body, html {
   height: 100%;
 }
 
+/* Use for landing page */
 .bg {
-  /* The image used */
   background:
     linear-gradient(
       rgba(255, 0, 0, 0.45),
@@ -26,16 +26,12 @@ body, html {
   background-attachment: fixed;
 }
 
-h1 {
-  color: var(--primary);
-}
-
-h2 {
-  color: var(--secondary);
-}
-
-h3 {
-  color: var(--primary);
+/* Used for nav */
+.bg-gradient {
+  background: linear-gradient(
+     rgba(255, 0, 0, 0.45),
+     rgba(39, 3, 85, 0.45)
+   ) !important;
 }
 
 .footer {

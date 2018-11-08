@@ -32,7 +32,7 @@ module.exports = function (sequelize, DataTypes) {
          },
          afterCreate: function (res) {
             console.log('---After creation---');
-            console.log(`Created Project with title ${res.dataValues.slug}`);
+            console.log(`Created Project with title ${res.dataValues.name}`);
          }
       }
    });

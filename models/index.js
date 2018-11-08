@@ -35,11 +35,11 @@ db.Sequelize = Sequelize;
 
 // Associations
 
-// Team -> Users
-db.team.hasMany(db.user, {
+// Users -> Team
+db.user.hasMany(db.team, {
    as: 'teamUsers' 
 });
-db.user.belongsTo(db.team, {
+db.team.belongsTo(db.user, {
   as: 'teamUser'
 });
 
