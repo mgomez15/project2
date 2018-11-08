@@ -32,16 +32,16 @@ module.exports = function (sequelize, DataTypes) {
          },
          afterCreate: function (res) {
             console.log('---After creation---');
-            console.log(`Created Project with title ${res.dataValues.slug}`);
+            console.log(`Created Project with title ${res.dataValues.name}`);
          }
       }
    });
-   // Project.associate = function (db) {
-   //    // Project has many tasks
-   //    Project.hasMany(db.task, {
-   //       as: 'tasks',
-   //       foreignKey: 'projectId'
-   //    });
-   // };
+   Project.associate = function (db) {
+      // Project has many tasks
+      Project.hasMany(db.task, {
+         as: 'tasks',
+         foreignKey: 'projectId'
+      });
+   };
    return Project;
 }

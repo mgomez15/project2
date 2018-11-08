@@ -63,7 +63,7 @@ require('./config/passport/passport.js')(passport, db.user);
 
 // Starting the server, syncing our models
 db.sequelize.sync({
-		force: true, // disable in production
+		force: false, // disable in production
 		logging: false // logging: console.log to enable logging
 	})
 	.then(function () {
