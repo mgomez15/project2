@@ -1,4 +1,7 @@
 const db = require("../models");
+const Project = require('../models').project;
+const User = require('../models').user;
+const Task = require('../models').task;
 
 module.exports = {
 	allUsers: (req, res) => {
@@ -26,13 +29,20 @@ module.exports = {
 			});
 	},
 	newProject: (req, res) => {
-		let data = {
-			name: req.body.name,
-			description: req.body.description
-		}
-		db.project.create(data).then(() => {
-			res.render('project', data);
-		});
+			let data = {
+				name: req.body.name,
+				description: req.body.description
+			}
+			Project.create(data).then(db => {
+				db.createTask({
+					name: 'My first task'
+				}).then(() => {
+					res.render('project', {
+						name: req.body.name,
+						description: req.body.description
+					});
+				});
+			})
 	},
 	newTeam: (req, res) => {
 		db.team.create({

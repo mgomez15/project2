@@ -36,12 +36,12 @@ module.exports = function (sequelize, DataTypes) {
          }
       }
    });
-   // Project.associate = function (db) {
-   //    // Project has many tasks
-   //    Project.hasMany(db.task, {
-   //       as: 'tasks',
-   //       foreignKey: 'projectId'
-   //    });
-   // };
+   Project.associate = function (db) {
+      // Project has many tasks
+      Project.hasMany(db.task, {
+         as: 'tasks',
+         foreignKey: 'projectId'
+      });
+   };
    return Project;
 }

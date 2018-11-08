@@ -4,70 +4,121 @@
   <div class="card" style="width: 70rem;">
 
     {{!-- Main section --}}
-    <main role="main" class="p-5">
-
+    <main role="main bg-dark" class="px-5 py-1">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
         <h2 class="h2">Project Dashboard</h2>
         <div class="btn-toolbar mb-md-0">
           <div class="btn-group">
-            <a class="btn btn-md btn-outline-secondary" data-toggle="modal" data-target="#teamModal"><i class="fas fa-users mr-2"></i>Recruit Members</a>
-            <a class="btn btn-md btn-outline-secondary" data-toggle="modal" data-target="#projectModal"><i class="fas fa-thumbtack mr-2"></i>Add Task</a>
+            <a class="btn btn-md btn-outline-secondary" data-toggle="modal" data-target="#teamModal"><i class="fas fa-users mr-2"></i>Recruit
+              Members</a>
           </div>
         </div>
       </div>
       <div class="jumbotron">
         <h1 class="display-4">Your new project '<span class="text-info">{{name}}'</span> is ready.</h1>
-        <p class="lead">Here you can recruit team members or assign tasks.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <p class="lead">Project Description:</p>
+        <p>{{description}}</p>
+      </div>
+    </main>
+
+    {{!-- Tasks section --}}
+    <section class="px-5 py-1">
+      <div class="row">
+        <div class="col">
+          <div class="kanbanContainer" style="width:200px;">
+            {{> widget/kanban }}
+          </div>   
+        </div>
       </div>
 
-    </main>
+      {{!-- <h2 class="h2">Tasks</h2>
+      <hr />
+      <div class="row mb-5">
+        <div class="col-4">
+          <div class="card mx-1" style="width: 18rem;">
+            <h4 class="card-header bg-info">
+              To Do
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card mx-1" style="width: 18rem;">
+            <h4 class="card-header bg-warning">
+              In Progress
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card mx-1" style="width: 18rem;">
+            <h4 class="card-header bg-success">
+              Complete
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Cras justo odio</li>
+              <li class="list-group-item">Dapibus ac facilisis in</li>
+              <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+          </div>
+        </div>
+      </div> --}}
+    </section>
+
+
+
   </div>
 </div>
 
+
+
 {{!-- new project modal --}}
+<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Create a project</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
- <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="projectModalLabel">Create a project</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+        {{> form/newProject }}
 
-         {{> form/newProject }}
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
 </div>
+</div>
 
 <div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="teamModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="teamModalLabel">Recruit a team</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="teamModalLabel">Recruit a team</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
 
-         {{> form/newTeam }}
-         
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+        {{> form/newTeam }}
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

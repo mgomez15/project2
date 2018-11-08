@@ -16,11 +16,11 @@ module.exports = function (sequelize, DataTypes) {
          defaultValue: 'incomplete'
       }
    });
-   // Task.associate = function(db) {
-   //    // Task belongs to project
-   //    Task.belongsTo(db.project, {
-   //       foreignKey: 'projectId'
-   //    });
-   // };
+   Task.associate = function(db) {
+      // Task belongs to project
+      Task.belongsTo(db.project, {
+         foreignKey: 'projectId'
+      });
+   };
    return Task;
 }
