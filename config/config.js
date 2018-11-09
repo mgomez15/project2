@@ -10,10 +10,10 @@ module.exports = {
 		"peratorsAliases": "false"
 	},
 	"test": {
-		"username": "root",
-		"password": "root",
-		"database": "mvp_database",
-		"host": "localhost",
+		"username": "",
+		"password": "null",
+		"database": "",
+		"host": "",
 		"dialect": "mysql"
 	},
 	"production": {
