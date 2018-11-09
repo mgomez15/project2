@@ -24,7 +24,7 @@
             // create a form to enter element 
             var formItem = document.createElement('form');
             formItem.setAttribute("class", "itemform");
-            formItem.innerHTML = '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button></div>'
+            formItem.innerHTML = '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary pull-right">Submit</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button></div>'
 
             KanbanTest.addForm(boardId, formItem);
             formItem.addEventListener("submit", function (e) {
@@ -61,7 +61,7 @@
                         }
                     },
                     {
-                        "title": "Create 'Users' table",
+                        "title": "Setup MySQL database",
                         "click": function (el) {
                             alert("click");
                         },
@@ -74,10 +74,7 @@
                 "class": "bg-warning,text-light",
                 "item": [
                     {
-                        "title": "Do Something!",
-                    },
-                    {
-                        "title": "Run?",
+                        "title": "Finish Boostrap frontend",
                     }
                 ]
             },
@@ -87,10 +84,7 @@
                 "class": "bg-danger,text-light",
                 "item": [
                     {
-                        "title": "Do Something!",
-                    },
-                    {
-                        "title": "Run?",
+                        "title": "Review UX/UI",
                     }
                 ]
             },
@@ -98,13 +92,9 @@
                 "id": "_done",
                 "title": "Done",
                 "class": "bg-success,text-light",
-                "dragTo": ['_working'],
                 "item": [
                     {
-                        "title": "All right",
-                    },
-                    {
-                        "title": "Ok!",
+                        "title": "Initialize Node.js",
                     }
                 ]
             }

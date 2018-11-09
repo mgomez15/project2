@@ -238,7 +238,7 @@ var dragula = require('dragula');
                 if (addButton) {
                     var btn = document.createElement("BUTTON");
                     var t = document.createTextNode(buttonContent);
-                    btn.setAttribute("class", "kanban-title-button btn btn-default btn-xs");
+                    btn.setAttribute("class", "kanban-title-button btn btn-dark text-light");
                     btn.appendChild(t);
                     //var buttonHtml = '<button class="kanban-title-button btn btn-default btn-xs">'+buttonContent+'</button>'
                     headerBoard.appendChild(btn);
