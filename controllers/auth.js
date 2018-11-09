@@ -7,7 +7,8 @@ module.exports = {
    },
    dashboard: (req, res) => {
       res.render('dashboard', {
-         username: req.user.username      });
+         username: req.user.username
+      });
    },
    logout: (req, res) => {
       req.session.destroy(function (err) {

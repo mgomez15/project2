@@ -16,7 +16,7 @@ module.exports = {
 	},
 	allProjects: (req, res) => {
 		db.project.findAll({
-				// include: ['tasks']
+				include: ['tasks']
 			})
 			.then(function (projects) {
 				res.json(projects);
@@ -31,11 +31,13 @@ module.exports = {
 	newProject: (req, res) => {
 			let data = {
 				name: req.body.name,
-				description: req.body.description
+				description: req.body.description,
+				userId: req.user.id
 			}
 			Project.create(data).then(db => {
 				db.createTask({
-					name: 'My first task'
+					name: 'My first task',
+					userId: req.user.id
 				}).then(() => {
 					res.render('project', {
 						name: req.body.name,
@@ -43,26 +45,5 @@ module.exports = {
 					});
 				});
 			})
-	},
-	newTeam: (req, res) => {
-		db.team.create({
-			name: 'My First Team',
-			user: {
-				first_name: 'Mick',
-				last_name: 'Broadstone',
-				addresses: [{
-					type: 'home',
-					line_1: '100 Main St.',
-					city: 'Austin',
-					state: 'TX',
-					zip: '78704'
-				}]
-			}
-		}, {
-			include: [{
-				association: Product.User,
-				include: [User.Addresses]
-			}]
-		})
 	}
 };
